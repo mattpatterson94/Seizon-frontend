@@ -16,5 +16,9 @@ header.page-header {
 			@include span-columns(6);
 			@include shift(6);
 		}
+
+		input {
+			margin-bottom: 0;
+		}
 	}
 }
