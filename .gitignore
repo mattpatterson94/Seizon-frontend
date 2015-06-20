@@ -1,6 +1,8 @@
-node_modules
-.tmp
-.sass-cache
-bower_components
-build/js
-css/*.css
+/.idea
+/vendor
+/node_modules
+.env
+.DS_Store
+Thumbs.db
+composer.phar
+composer.lock
