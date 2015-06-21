@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Aller';
+  src: url('../fonts/ALLER.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ALLER.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ALLER.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ALLER.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ALLER.svg#08bb4ba465a902745fc23c83a5d9fdc2') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+$aller-font-family: 'Aller', sans-serif;

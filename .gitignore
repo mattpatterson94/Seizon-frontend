@@ -1,8 +1,3 @@
-/.idea
-/vendor
+.idea/
 /node_modules
-.env
-.DS_Store
-Thumbs.db
-composer.phar
-composer.lock
+/resources/vendor
