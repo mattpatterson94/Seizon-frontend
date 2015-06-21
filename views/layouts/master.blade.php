@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     @section('meta')
         <meta name="description" content="{{ Setting::get('core::site-description') }}" />
+        <meta property="og:sitename" content="{{ Setting::get('core::site-name') }}" />
+        <meta property="og:image" content="{{ Theme::image('img/goat-thing.png') }}" />
+        <meta property="og:description" content="{{ Setting::get('core::site-description') }}" />
     @show
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
