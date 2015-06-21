@@ -20,6 +20,18 @@ body {
   border-bottom: 2px solid #fff;
 }
 
+.navbar-inverse .navbar {
+  &-brand {
+    font-weight: bold;
+    color: $body-bg;
+
+    img {
+      display: inline;
+      height: 30px;
+    }
+  }
+}
+
 .page-heading {
   background: lighten($brand-primary, 5%);
   padding: 20px 0;
