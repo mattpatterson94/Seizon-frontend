@@ -4,6 +4,14 @@
     {{ $post->title }} | @parent
 @stop
 
+@section('meta')
+    <meta name="title" content="{{ $post->title }}" />
+    <meta name="description" content="{{ substr($post->content, 0, 100) }}..." />
+    <meta property="og:sitename" content="{{ $post->title }}" />
+    <meta property="og:image" content="{{$post->files()->first()->path}}" />
+    <meta property="og:description" content="{{ substr($post->content, 0, 100) }}..." />
+@stop
+
 @section('content')
     <div class="blog-post text-center">
         <div class="blog-header" style="background-image: url({{$post->files()->first()->path}})">
