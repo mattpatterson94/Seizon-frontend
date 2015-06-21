@@ -1,0 +1,91 @@
+$icon-font-path: '../fonts/';
+
+@import "variables";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "bootswatch";
+
+body {
+  padding-top: $navbar-height;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  border-bottom: 2px solid #fff;
+}
+
+.page-heading {
+  background: lighten($brand-primary, 5%);
+  padding: 20px 0;
+  margin-bottom: 40px;
+
+  h1, h2, h3, h4, p.lead {
+    color: #fff;
+  }
+}
+
+.panel-timer {
+  &.panel-primary .panel-heading, &.panel-warning .panel-heading {
+    h1, h2, h3, h4, h5, a:not(.btn) {
+      color: #fff;
+
+      small {
+        color: #fff;
+      }
+    }
+  }
+
+  .company-name, .project-name {
+    margin: 0;
+  }
+
+  .company-name {
+    font-weight: normal;
+  }
+
+  .percentage-remaining {
+    font-weight: normal;
+  }
+}
+
+.panel-quick-timer {
+  .time-remaining {
+    margin: 0;
+  }
+}
+
+.time-remaining.disabled {
+  color: $gray-light;
+  opacity: 0.7;
+}
+
+.edit-widget {
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+hr {
+  border-color:  mix($text-color, $body-bg, 30%);
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin: 12px 0;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+// Floating Action Button (FAB)
+
+.btn-fab {
+    margin: 0;
+    padding: 15px;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
