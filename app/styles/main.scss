@@ -12,7 +12,11 @@ body {
   padding-top: $navbar-height;
 }
 
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > li > a {
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > li > a:hover {
   border-bottom: 2px solid #fff;
 }
 
