@@ -24,7 +24,7 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="has-overlap">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -60,9 +60,9 @@
           <div class="col-md-7">
             <h3>Welcome back, Jordan.</h3>
             <p class="lead">
-              You last signed in on <strong>June 20, 2015</strong> at <strong>7:18pm</strong>.<br>
-              Time to get busy.
+              You last signed in on <strong>June 20, 2015</strong> at <strong>7:18pm</strong>.
             </p>
+            <p><a href="#" class="btn btn-default"><i class="fa fa-plus"></i> Add Widget</a></p>
           </div>
           <div class="col-md-5">
             <div class="panel panel-default panel-quick-timer">
@@ -76,7 +76,7 @@
                   </div>
                   <div class="col-md-5 text-right">
                     <h2 class="time-remaining disabled">0<small>h</small> 0<small>m</small> 0<small>s</small></h2>
-                    <a href="#" class="btn btn-primary btn-fab"><i class="fa fa-lg fa-play"></i></a>
+                    <a href="#" class="btn btn-success btn-fab"><i class="fa fa-lg fa-play"></i></a>
                   </div>
                 </div>
               </div>
@@ -86,142 +86,139 @@
       </div>
     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="text-right"><a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add Widget</a></p>
-        </div>
-      </div><!-- /.row -->
-      <div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-primary panel-timer">
-            <div class="panel-heading">
-              <h5 class="company-name">Company <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h5>
-              <h4 class="project-name">Project Name</h4>
-              <h2 class="time-remaining">
-                1<small>h</small> 15<small>m</small> 4<small>s</small>
-                <a href="#" class="btn btn-default btn-fab pull-right"><i class="fa fa-lg fa-play"></i></a>
-              </h2>
-            </div>
-            <div class="panel-body">
-              <h4>4h allocated <span class="percentage-remaining pull-right">69% left</span></h4>
-            </div>
-            <div class="panel-footer">
-              <a href="#" class="btn btn-block btn-default"><i class="fa fa-fw fa-info"></i> View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="panel panel-warning panel-timer">
-            <div class="panel-heading">
-              <h5 class="company-name">Company Two <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h5>
-              <h4 class="project-name">Another Project Name</h4>
-              <h2 class="time-remaining">
-                16<small>h</small> 42<small>m</small> 9<small>s</small>
-                <a href="#" class="btn btn-default btn-fab pull-right"><i class="fa fa-lg fa-play"></i></a>
-              </h2>
-            </div>
-            <div class="panel-body">
-              <h4>10h allocated <span class="percentage-remaining text-warning pull-right">61% over</span></h4>
-            </div>
-            <div class="panel-footer">
-              <a href="#" class="btn btn-block btn-default"><i class="fa fa-fw fa-info"></i> View Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="panel panel-primary panel-timer">
-            <div class="panel-heading">
-              <h5 class="company-name">Company <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h5>
-              <h4 class="project-name">Project Name</h4>
-              <h2 class="time-remaining">
-                1<small>h</small> 15<small>m</small> 4<small>s</small>
-                <a href="#" class="btn btn-default btn-fab pull-right"><i class="fa fa-lg fa-play"></i></a>
-              </h2>
-            </div>
-            <div class="panel-body">
-              <h4>4h allocated <span class="percentage-remaining pull-right">69% left</span></h4>
-            </div>
-            <div class="panel-footer">
-              <a href="#" class="btn btn-block btn-default"><i class="fa fa-fw fa-info"></i> View Details</a>
-            </div>
-          </div>
-        </div>
-      </div><!-- /.row -->
-      <div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-bar-chart"></i> Statistics <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h3>
-            </div>
-            <div class="panel-body">
-              <h5>June So Far</h5>
-              <ul class="list-group">
-                <li class="list-group-item">
-                  Projects on track
-                  <span class="pull-right"><strong>15 <span class="text-success">+3 <i class="fa fa-thumbs-up"></i></span></strong></span>
-                </li>
-                <li class="list-group-item">
-                  Projects in danger
-                  <span class="pull-right"><strong>2 <span class="text-danger">+2 <i class="fa fa-thumbs-down"></i></span></strong></span>
-                </li>
-                <li class="list-group-item">
-                  Hours spent on projects
-                  <span class="pull-right"><strong>25 <span class="text-warning">0 <i class="fa fa-meh-o"></i></span></strong></span>
-                </li>
-                <li class="list-group-item">
-                  New projects created
-                  <span class="pull-right"><strong>6 <span class="text-success">+1 <i class="fa fa-thumbs-up"></i></span></strong></span>
-                </li>
-                <li class="list-group-item">
-                  <em>Evil timelords captured</em>
-                  <span class="pull-right"><strong>17 <span class="text-success">+2 <i class="fa fa-thumbs-up"></i></span></strong></span>
-                </li>
-              </ul>
-            </div>
-            <div class="panel-footer">
-              <div class="btn-group btn-group-justified">
-                <a href="#" class="btn btn-default"><i class="fa fa-fw fa-info"></i> View Reports</a>
+    <section class="page-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-primary panel-timer">
+              <div class="panel-heading">
+                <h5 class="company-name">Company <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h5>
+                <h4 class="project-name">Project Name</h4>
+                <h2 class="time-remaining">
+                  1<small>h</small> 15<small>m</small> 4<small>s</small>
+                  <a href="#" class="btn btn-success btn-fab pull-right"><i class="fa fa-lg fa-play"></i></a>
+                </h2>
+              </div>
+              <div class="panel-body">
+                <h4>4h allocated <span class="percentage-remaining pull-right">69% left</span></h4>
+              </div>
+              <div class="panel-footer">
+                <a href="#" class="btn btn-block btn-default"><i class="fa fa-fw fa-info"></i> View Details</a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-exclamation-circle"></i> Tips <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h3>
-            </div>
-            <div class="panel-body">
-              <h5>Did You Know?</h5>
-              <p>We don't have any tips for you just yet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque laborum adipisci placeat, itaque illo! Illo rem impedit optio excepturi earum, minima, ea aliquam ab laudantium pariatur aspernatur ut soluta fugit? Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
-            </div>
-            <div class="panel-footer">
-              <div class="btn-group btn-group-justified">
-                <a href="#" class="btn btn-default disabled"><i class="fa fa-fw fa-chevron-left"></i> Previous</a>
-                <a href="#" class="btn btn-default">Next <i class="fa fa-fw fa-chevron-right"></i></a>
+          <div class="col-md-4">
+            <div class="panel panel-warning panel-timer">
+              <div class="panel-heading">
+                <h5 class="company-name">Company Two <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h5>
+                <h4 class="project-name">Another Project Name</h4>
+                <h2 class="time-remaining">
+                  16<small>h</small> 42<small>m</small> 9<small>s</small>
+                  <a href="#" class="btn btn-success btn-fab pull-right"><i class="fa fa-lg fa-play"></i></a>
+                </h2>
+              </div>
+              <div class="panel-body">
+                <h4>10h allocated <span class="percentage-remaining text-warning pull-right">61% over</span></h4>
+              </div>
+              <div class="panel-footer">
+                <a href="#" class="btn btn-block btn-default"><i class="fa fa-fw fa-info"></i> View Details</a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-bar-chart"></i> Feedback <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h3>
-            </div>
-            <div class="panel-body">
-              <p>Have any feedback for <strong>Seizon</strong>? We'd love to hear your thoughts.</p>
-              <textarea name="name" class="form-control" placeholder="Leave your comments here." rows="12"></textarea>
-            </div>
-            <div class="panel-footer">
-              <div class="btn-group btn-group-justified">
-                <a href="#" class="btn btn-primary">Leave Feedback</a>
+          <div class="col-md-4">
+            <div class="panel panel-primary panel-timer">
+              <div class="panel-heading">
+                <h5 class="company-name">Company <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h5>
+                <h4 class="project-name">Project Name</h4>
+                <h2 class="time-remaining">
+                  1<small>h</small> 15<small>m</small> 4<small>s</small>
+                  <a href="#" class="btn btn-success btn-fab pull-right"><i class="fa fa-lg fa-play"></i></a>
+                </h2>
+              </div>
+              <div class="panel-body">
+                <h4>4h allocated <span class="percentage-remaining pull-right">69% left</span></h4>
+              </div>
+              <div class="panel-footer">
+                <a href="#" class="btn btn-block btn-default"><i class="fa fa-fw fa-info"></i> View Details</a>
               </div>
             </div>
           </div>
-        </div>
-      </div><!-- /.row -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart"></i> Statistics <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h3>
+              </div>
+              <div class="panel-body">
+                <h5>June So Far</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    Projects on track
+                    <span class="pull-right"><strong>15 <span class="text-success">+3 <i class="fa fa-thumbs-up"></i></span></strong></span>
+                  </li>
+                  <li class="list-group-item">
+                    Projects in danger
+                    <span class="pull-right"><strong>2 <span class="text-danger">+2 <i class="fa fa-thumbs-down"></i></span></strong></span>
+                  </li>
+                  <li class="list-group-item">
+                    Hours spent on projects
+                    <span class="pull-right"><strong>25 <span class="text-warning">0 <i class="fa fa-meh-o"></i></span></strong></span>
+                  </li>
+                  <li class="list-group-item">
+                    New projects created
+                    <span class="pull-right"><strong>6 <span class="text-success">+1 <i class="fa fa-thumbs-up"></i></span></strong></span>
+                  </li>
+                  <li class="list-group-item">
+                    <em>Evil timelords captured</em>
+                    <span class="pull-right"><strong>17 <span class="text-success">+2 <i class="fa fa-thumbs-up"></i></span></strong></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-footer">
+                <div class="btn-group btn-group-justified">
+                  <a href="#" class="btn btn-default"><i class="fa fa-fw fa-info"></i> View Reports</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-exclamation-circle"></i> Tips <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h3>
+              </div>
+              <div class="panel-body">
+                <h5>Did You Know?</h5>
+                <p>We don't have any tips for you just yet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque laborum adipisci placeat, itaque illo! Illo rem impedit optio excepturi earum, minima, ea aliquam ab laudantium pariatur aspernatur ut soluta fugit? Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+              </div>
+              <div class="panel-footer">
+                <div class="btn-group btn-group-justified">
+                  <a href="#" class="btn btn-default disabled"><i class="fa fa-fw fa-chevron-left"></i> Previous</a>
+                  <a href="#" class="btn btn-default">Next <i class="fa fa-fw fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart"></i> Feedback <a href="#" class="edit-widget pull-right"><i class="fa fa-ellipsis-v"></i></a></h3>
+              </div>
+              <div class="panel-body">
+                <p>Have any feedback for <strong>Seizon</strong>? We'd love to hear your thoughts.</p>
+                <textarea name="name" class="form-control" placeholder="Leave your comments here." rows="12"></textarea>
+              </div>
+              <div class="panel-footer">
+                <div class="btn-group btn-group-justified">
+                  <a href="#" class="btn btn-primary">Leave Feedback</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
 
-    </div><!-- /.container -->
+      </div><!-- /.container -->
+    </section>
 
     <!-- build:js scripts/plugins.js -->
     <script type="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>

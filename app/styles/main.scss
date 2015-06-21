@@ -42,14 +42,25 @@ body {
   }
 }
 
-.panel-timer {
-  &.panel-primary .panel-heading, &.panel-warning .panel-heading {
-    h1, h2, h3, h4, h5, a:not(.btn) {
-      color: #fff;
+body.has-overlap .page-heading {
+  padding-bottom: 120px;
 
-      small {
-        color: #fff;
-      }
+  .container {
+    padding-bottom: 20px;
+    min-height: 200px;
+  }
+}
+
+body.has-overlap .page-content {
+  margin-top: -160px;
+}
+
+.panel-primary .panel-heading, &.panel-warning .panel-heading {
+  h1, h2, h3, h4, h5, a:not(.btn) {
+    color: #fff;
+
+    small {
+      color: #fff;
     }
   }
 
