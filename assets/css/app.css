@@ -463,14 +463,19 @@ div.blog-list {
     display: inline-block; }
     div.blog-list ul li h4 a {
       display: inline-block;
-      padding-left: 20px;
-      color: #073b3a; }
+      color: #073b3a;
+      transition: 0.2s linear all; }
+      div.blog-list ul li h4 a span.date {
+        opacity: 0.5;
+        font-weight: 300;
+        transition: 0.2s linear all;
+        color: #8bc34a;
+        display: inline-block;
+        padding-right: 20px; }
     div.blog-list ul li h4:hover a {
       color: #8bc34a; }
-  div.blog-list ul li span.date {
-    opacity: 0.5;
-    font-size: 1.875em;
-    color: #8bc34a; }
+      div.blog-list ul li h4:hover a span.date {
+        opacity: 1; }
 
 span.linkBack a {
   display: inline-block;

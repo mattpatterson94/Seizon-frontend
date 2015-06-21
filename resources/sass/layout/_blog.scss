@@ -57,17 +57,23 @@ div.blog-list {
 				display: inline-block;
 				a {
 					display: inline-block;
-					padding-left: 20px;
 					color: $deep-blue;
+					transition: 0.2s linear all;
+					span.date {
+						opacity: 0.5;
+						font-weight: 300;
+						transition: 0.2s linear all;
+						color: $green;
+						display: inline-block;
+						padding-right: 20px;
+					}
 				}
 				&:hover a {
 					color: $green;
+					span.date {
+						opacity: 1;
+					}
 				}
-			}
-			span.date {
-				opacity: 0.5;
-				font-size: 1.875em;
-				color: $green;
 			}
 		}
 	}

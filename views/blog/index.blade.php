@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Blog posts | @parent
+    Seizon Blog | Latest updates | @parent
 @stop
 
 @section('content')
@@ -12,8 +12,7 @@
             <ul>
                 <?php foreach($posts as $post): ?>
                     <li>
-                        <span class="date">{{ $post->created_at->format('d M Y') }}</span>
-                        <h4><a href="{{ URL::route($currentLocale . '.blog.slug', [$post->slug]) }}">{{ $post->title }}</a></h4>
+                        <h4><a href="{{ URL::route($currentLocale . '.blog.slug', [$post->slug]) }}"><span class="date">{{ $post->created_at->format('d M Y') }}</span><span class="title">{{ $post->title }}</span></a></h4>
                     </li>
                     <div class="clearfix"></div>
                 <?php endforeach; ?>
