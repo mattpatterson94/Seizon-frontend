@@ -43,12 +43,12 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Jordan</a></li>
-            <li><a href="settings.html">Settings</a></li>
+            <li class="active"><a href="settings.html">Settings</a></li>
             <li><a href="#">Logout</a></li>
           </ul>
           <ul class="nav navbar-nav">
             <li><a href="index.html">Dashboard</a></li>
-            <li class="active"><a href="projects.html">Projects</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="#">Reports</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -58,12 +58,9 @@
     <header class="page-heading">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h4>Projects</h4>
-            <h3>June 20th 2015</h3>
-          </div>
-          <div class="col-md-6">
-            <h3 class="text-right"><a href="#" class="btn btn-primary btn-lg"><i class="fa fa-calendar"></i> Choose Date</a></h3>
+          <div class="col-md-12">
+            <h3>Settings</h3>
+            <h4>Jordan Gardiner</h4>
           </div>
         </div>
       </div>
@@ -74,81 +71,33 @@
         <div class="row">
           <div class="col-md-12">
             <div class="panel panel-default">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-md-12">
-                    <a href="#" class="pull-right"><i class="fa fa-times"></i></a>
-                    <div class="form-group">
-                      <label for="">Company Name</label>
-                      <input type="text" class="form-control input-lg" placeholder="Start typing a company name...">
-                    </div>
-                  </div>
-                </div>
-
-              </div>
               <div class="panel-body">
-
                 <div class="row">
-                  <div class="col-md-6">
-                    <a href="#" class="pull-right"><i class="fa fa-times"></i></a>
-                    <div class="form-group">
-                      <label for="">Project Name</label>
-                      <input type="text" class="form-control" placeholder="Start typing a project name...">
-                    </div>
-                    <div class="form-group">
-                      <label for="">Project Description</label>
-                      <textarea class="form-control" placeholder="Enter a description of the tasks completed" rows="5"></textarea>
-                    </div>
+                  <div class="col-md-4">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                      <li role="presentation" class="active"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">Account</a></li>
+                      <li role="presentation"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Billing</a></li>
+                    </ul>
                   </div>
-                  <div class="col-md-6">
-                    <div class="panel panel-primary">
-                      <div class="panel-heading">
-                        <h2 class="time-remaining">0<small>h</small> 0<small>m</small> 0<small>s</small> <a href="#" class="btn btn-success btn-fab pull-right"><i class="fa fa-lg fa-play"></i></a></h2>
-                      </div>
-                    </div>
-                    <p>Or:</p>
-                    <div class="row">
-                      <div class="col-md-6">
+                  <div class="col-md-8">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="account">
                         <div class="form-group">
-                          <label for="start-time">Start Time</label>
-                          <input type="text" class="form-control" id="start-time" placeholder="eg. 10am">
+                          <label for="">Company Name</label>
+                          <input type="text" class="form-control input-lg" placeholder="Smith Co.">
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="end-time">End Time</label>
-                          <input type="email" class="form-control" id="end-time" placeholder="eg. 5pm">
-                        </div>
+                      <div role="tabpanel" class="tab-pane" id="billing">
+
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <a href="#">
-              <div class="panel">
-                <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <p class="no-margin">Another Company Name</p>
-                      </div>
-                      <div class="col-md-3">
-                        <p class="no-margin">Woot Woot Project Name</p>
-                      </div>
-                      <div class="col-md-4">
-                        <p class="no-margin">Project Description goes here and is quite long...</p>
-                      </div>
-                      <div class="col-md-2">
-                        <p class="no-margin text-right">10:15am-1:30pm</p>
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </a>
-
-            <p class="text-right"><a href="#" class="btn btn-primary">Done</a></p>
-
-
+            <p class="text-right"><a href="#" class="btn btn-primary">Save</a></p>
           </div>
         </div>
       </div><!-- /.container -->
