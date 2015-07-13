@@ -8,21 +8,26 @@
   /** @ngInject */
   function seizonEntry() {
     var directive = {
+      require: "^seizonEntries",
       restrict: 'E',
       templateUrl: 'app/components/entry/entry.html',
       scope: {
-          // creationDate: '='
+          entryId: '='
       },
       controller: EntryController,
-      controllerAs: 'vm',
-      bindToController: true
+      controllerAs: 'entry',
+      bindToController: true,
     };
 
     return directive;
 
     /** @ngInject */
-    function EntryController() {
-      var vm = this;
+    function EntryController($scope) {
+      var entry = this;
+      entry.del = function()
+      {
+        $scope.$parent.entries.entries.splice(entry.entryId, 1);
+      }
     }
   }
 
