@@ -1,0 +1,8 @@
+<div class="panel" ng-class="{'panel-primary': vm.timerRunning == false, 'panel-warning': vm.timerRunning == true}">
+  <div class="panel-heading">
+    <h2 class="time-remaining">
+      <!-- 0<small>h</small> 0<small>m</small> 0<small>s</small> -->
+      <timer autostart="false" interval="1000">{{hhours}}<small>h</small> {{mminutes}}<small>m</small> {{sseconds}}<small>s</small></timer>
+      <a class="btn btn-fab pull-right" ng-click="vm.startStopTimer()" ng-class="{'btn-success': vm.timerRunning == false, 'btn-danger': vm.timerRunning == true}"><i class="fa fa-lg" ng-class="{'fa-play': vm.timerRunning == false, 'fa-stop': vm.timerRunning == true}"></i></a></h2>
+  </div>
+</div>
