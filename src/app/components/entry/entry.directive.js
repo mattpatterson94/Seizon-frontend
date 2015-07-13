@@ -3,17 +3,17 @@
 
   angular
     .module('seizon')
-    .directive('seizonNavbar', seizonNavbar);
+    .directive('seizonEntry', seizonEntry);
 
   /** @ngInject */
-  function seizonNavbar() {
+  function seizonEntry() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
+      templateUrl: 'app/components/entry/entry.html',
       scope: {
           // creationDate: '='
       },
-      controller: NavbarController,
+      controller: EntryController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
+    function EntryController() {
       var vm = this;
     }
   }

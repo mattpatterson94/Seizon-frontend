@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('testGulpAngular')
+    .module('seizon')
     .constant('malarkey', malarkey)
     .constant('toastr', toastr)
     .constant('moment', moment);

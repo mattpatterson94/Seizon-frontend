@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('testGulpAngular', ['ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'ui.bootstrap']);
+    .module('seizon', ['ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'ui.bootstrap']);
 
 })();

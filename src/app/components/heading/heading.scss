@@ -1,0 +1,22 @@
+.page-heading {
+  background: lighten($brand-primary, 5%);
+  padding: 20px 0;
+  margin-bottom: 40px;
+
+  h1, h2, h3, h4, p.lead {
+    color: #fff;
+  }
+}
+
+body.has-overlap .page-heading {
+  padding-bottom: 120px;
+
+  .container {
+    padding-bottom: 20px;
+    min-height: 200px;
+  }
+}
+
+body.has-overlap .page-content {
+  margin-top: -160px;
+}

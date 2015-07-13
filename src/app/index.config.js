@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('testGulpAngular')
+    .module('seizon')
     .config(config);
 
   /** @ngInject */
