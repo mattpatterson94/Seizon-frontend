@@ -26,16 +26,23 @@
 
       vm.timerRunning = false;
       vm.firstStart = true;
+      vm.timeStarted = "";
+      vm.timeEnded = "";
 
       vm.startStopTimer = function(){
         if (vm.firstStart == true) {
+          // First time started
           $rootScope.$broadcast('timer-start');
           vm.timerRunning = true;
+          vm.timeStarted = new Date();
           vm.firstStart = false;
         } else if (vm.timerRunning == true) {
+          // timer is currently running
           $rootScope.$broadcast('timer-stop');
           vm.timerRunning = false;
+          vm.timeEnded = new Date();
         } else {
+          // timer isn't currently running
           $rootScope.$broadcast('timer-resume');
           vm.timerRunning = true;
         }
