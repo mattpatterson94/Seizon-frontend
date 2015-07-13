@@ -1,0 +1,23 @@
+<div class="panel" ng-class="{'panel-primary': vm.timerRunning == false, 'panel-warning': vm.timerRunning == true}">
+  <div class="panel-heading">
+    <h2 class="time-remaining">
+      <!-- 0<small>h</small> 0<small>m</small> 0<small>s</small> -->
+      <timer autostart="false" interval="1000">{{hhours}}<small>h</small> {{mminutes}}<small>m</small> {{sseconds}}<small>s</small></timer>
+      <a class="btn btn-fab pull-right" ng-click="vm.startStopTimer()" ng-class="{'btn-success': vm.timerRunning == false, 'btn-danger': vm.timerRunning == true}"><i class="fa fa-lg" ng-class="{'fa-play': vm.timerRunning == false, 'fa-stop': vm.timerRunning == true}"></i></a></h2>
+  </div>
+</div>
+<p>Or:</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="start-time">Start Time</label>
+      <input type="text" class="form-control" id="start-time" placeholder="eg. 10am" ng-value="vm.timeStarted | amDateFormat:'h:mm:ss a'">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="end-time">End Time</label>
+      <input type="email" class="form-control" id="end-time" placeholder="eg. 5pm" ng-value="vm.timeEnded | amDateFormat:'h:mm:ss a'">
+    </div>
+  </div>
+</div>
