@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function TimerController($rootScope) {
+    function TimerController($scope) {
       var vm = this;
 
       vm.timerRunning = false;
@@ -32,18 +32,18 @@
       vm.startStopTimer = function(){
         if (vm.firstStart == true) {
           // First time started
-          $rootScope.$broadcast('timer-start');
+          $scope.$broadcast('timer-start');
           vm.timerRunning = true;
           vm.timeStarted = new Date();
           vm.firstStart = false;
         } else if (vm.timerRunning == true) {
           // timer is currently running
-          $rootScope.$broadcast('timer-stop');
+          $scope.$broadcast('timer-stop');
           vm.timerRunning = false;
           vm.timeEnded = new Date();
         } else {
           // timer isn't currently running
-          $rootScope.$broadcast('timer-resume');
+          $scope.$broadcast('timer-resume');
           vm.timerRunning = true;
         }
       };
