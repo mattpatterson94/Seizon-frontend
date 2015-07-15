@@ -17,6 +17,12 @@
       controller: EntryController,
       controllerAs: 'entry',
       bindToController: true,
+      link: function($scope, element, attrs) {
+        $scope.del = function()
+        {
+          element.remove();
+        }
+      }
     };
 
     return directive;
@@ -24,10 +30,6 @@
     /** @ngInject */
     function EntryController($scope) {
       var entry = this;
-      entry.del = function()
-      {
-        $scope.$parent.entries.entries.splice(entry.entryId, 1);
-      }
     }
   }
 

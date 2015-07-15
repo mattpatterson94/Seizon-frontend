@@ -21,14 +21,11 @@
     return directive;
 
     /** @ngInject */
-    function EntriesController() {
+    function EntriesController($scope, $compile, $element) {
       var entries = this;
-      entries.currentQty = entries.defaultQty;
-      entries.entries = new Array(entries.currentQty);
-
-      entries.add = function()
+      $scope.add = function()
       {
-        entries.entries.push("");
+        $element.append($compile('<seizon-entry></seizon-entry>')($scope));
       }
     }
   }
