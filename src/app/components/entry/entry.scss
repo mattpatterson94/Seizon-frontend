@@ -1,5 +1,44 @@
 .seizon-entry {
   margin-bottom: 20px;
+
+  .collapsed {
+    & > .panel {
+      margin-bottom: -10px;
+    }
+    div.entry-details {
+      padding: 10px;
+    }
+    .panel-body {
+      padding: 0;
+    }
+    .panel-heading {
+      border-top-left-radius: 0;
+    }
+    label.project-name {
+      padding-left: 10px;
+      font-size: 20px;
+      vertical-align: sub;
+      line-height: 20px;
+    }
+    .seizon-timer {
+      margin-bottom: 0;
+      box-shadow: none;
+      h2.time-remaining {
+        font-size: 32px;
+        margin: 0;
+        .btn-fab {
+          width: 40px;
+          height: 40px;
+          padding: 15px 0;
+          i.fa-lg {
+            font-size: 1.1em;
+            line-height: 0.6;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
 }
 
 .panel-primary .panel-heading, &.panel-warning .panel-heading {

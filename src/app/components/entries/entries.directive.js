@@ -25,7 +25,7 @@
       var entries = this;
       $scope.add = function()
       {
-        $element.append($compile('<seizon-entry></seizon-entry>')($scope));
+        $element.find('.entries').append($compile('<seizon-entry></seizon-entry>')($scope));
       }
     }
   }

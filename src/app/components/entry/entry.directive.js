@@ -30,6 +30,7 @@
     /** @ngInject */
     function EntryController($scope) {
       var entry = this;
+      $scope.collapsed = true;
     }
   }
 

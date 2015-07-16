@@ -8,10 +8,11 @@
   /** @ngInject */
   function seizonTimer() {
     var directive = {
+      require: "^seizonEntry",
       restrict: 'E',
       templateUrl: 'app/components/timer/timer.html',
       scope: {
-          // creationDate: '='
+          size: '@'
       },
       controller: TimerController,
       controllerAs: 'vm',
@@ -29,22 +30,31 @@
       vm.timeStarted = "";
       vm.timeEnded = "";
 
+      $scope.$parent.$on('timer-start', function() {
+        vm.timerRunning = true;
+        vm.timeStarted = new Date();
+        vm.firstStart = false;
+      });
+
+      $scope.$parent.$on('timer-stop', function() {
+        vm.timerRunning = false;
+        vm.timeEnded = new Date();
+      });
+
+      $scope.$parent.$on('timer-resume', function() {
+        vm.timerRunning = true;
+      });
+
       vm.startStopTimer = function(){
         if (vm.firstStart == true) {
           // First time started
-          $scope.$broadcast('timer-start');
-          vm.timerRunning = true;
-          vm.timeStarted = new Date();
-          vm.firstStart = false;
+          $scope.$parent.$broadcast('timer-start');
         } else if (vm.timerRunning == true) {
           // timer is currently running
-          $scope.$broadcast('timer-stop');
-          vm.timerRunning = false;
-          vm.timeEnded = new Date();
+          $scope.$parent.$broadcast('timer-stop');
         } else {
           // timer isn't currently running
-          $scope.$broadcast('timer-resume');
-          vm.timerRunning = true;
+          $scope.$parent.$broadcast('timer-resume');
         }
       };
     }

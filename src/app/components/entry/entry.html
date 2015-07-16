@@ -1,23 +1,60 @@
 <div class="seizon-entry">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="">Project Name</label>
-            <input type="text" class="form-control" placeholder="Start typing a project name...">
+  <div class="collapsed" ng-show="collapsed">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="entry-details">
+              <a href="#" ng-click="del()" class="btn btn-danger"><i class="fa fa-times"></i></a>
+              <a href="#" ng-click="collapsed = !collapsed" class="btn btn-warning"><i class="fa fa-plus"></i></a>
+              <label class="project-name" ng-bind-html="project_name || 'Project Name'">Project Name</label>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="">Project Description</label>
-            <textarea class="form-control" placeholder="Enter a description of the tasks completed" rows="5"></textarea>
+          <div class="col-md-6">
+            <seizon-timer size="small"></seizon-timer>
           </div>
-        </div>
-        <div class="col-md-6">
-          <seizon-timer></seizon-timer>
         </div>
       </div>
     </div>
   </div>
-  <a href="#" ng-click="del()" class="btn btn-primary"><i class="fa fa-times"></i></a>
-  <a href="#" class="btn btn-primary">Done</a>
+  <div class="uncollapsed" ng-hide="collapsed">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Project Name</label>
+              <input type="text" class="form-control" ng-model="project_name" placeholder="Start typing a project name...">
+            </div>
+            <div class="form-group">
+              <label for="">Project Description</label>
+              <textarea class="form-control" placeholder="Enter a description of the tasks completed" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <seizon-timer size="large"></seizon-timer>
+            <p>Or:</p>
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label for="start-time">Start Time</label>
+                  <input type="text" class="form-control" id="start-time" placeholder="eg. 10am" ng-value="vm.timeStarted | amDateFormat:'h:mm:ss a'">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label for="end-time">End Time</label>
+                  <input type="email" class="form-control" id="end-time" placeholder="eg. 5pm" ng-value="vm.timeEnded | amDateFormat:'h:mm:ss a'">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <a href="#" ng-click="del()" class="btn btn-danger"><i class="fa fa-times"></i></a>
+                <a href="#" ng-click="collapsed = !collapsed" class="btn btn-warning"><i class="fa fa-minus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
