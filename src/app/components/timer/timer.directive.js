@@ -19,7 +19,6 @@
         $scope.firstStart = true;
         $scope.timeStarted = "";
         $scope.timeEnded = "";
-        $scope.test = "";
 
         $scope.$parent.$on('timer-start', function() {
           $scope.timerRunning = true;
@@ -30,14 +29,11 @@
         $scope.$parent.$on('timer-stop', function() {
           $scope.timerRunning = false;
           $scope.$parent.timeEnded = new Date();
+          $scope.$root.$broadcast('timeChanged');
         });
 
         $scope.$parent.$on('timer-resume', function() {
           $scope.timerRunning = true;
-        });
-
-        $scope.$watch('test', function() {
-          console.log("Test changed");
         });
 
         $scope.startStopTimer = function(){

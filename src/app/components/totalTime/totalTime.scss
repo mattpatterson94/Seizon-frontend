@@ -1,0 +1,50 @@
+
+.panel-primary .panel-heading, &.panel-warning .panel-heading {
+  h1, h2, h3, h4, h5, a:not(.btn) {
+    color: #fff;
+
+    small {
+      color: #fff;
+    }
+  }
+
+  .company-name, .project-name {
+    margin: 0;
+  }
+
+  .company-name {
+    font-weight: normal;
+  }
+
+  .percentage-remaining {
+    font-weight: normal;
+  }
+}
+
+.panel-quick-timer {
+  .time-remaining {
+    margin: 0;
+  }
+}
+
+.time-remaining.disabled {
+  color: $gray-light;
+  opacity: 0.7;
+}
+
+.edit-widget {
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Floating Action Button (FAB)
+
+.btn-fab {
+    margin: 0;
+    padding: 15px;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
