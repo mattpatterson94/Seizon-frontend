@@ -24,7 +24,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="">Project Name</label>
-              <input type="text" class="form-control" ng-model="project_name" placeholder="Start typing a project name...">
+              <input type="text" class="form-control" ng-model="test" placeholder="Start typing a project name...">
             </div>
             <div class="form-group">
               <label for="">Project Description</label>
@@ -38,13 +38,13 @@
               <div class="col-md-5">
                 <div class="form-group">
                   <label for="start-time">Start Time</label>
-                  <input type="text" class="form-control" id="start-time" placeholder="eg. 10am" ng-value="vm.timeStarted | amDateFormat:'h:mm:ss a'">
+                  <input type="text" class="form-control" id="start-time" placeholder="eg. 10am" ng-value="timeStarted | amDateFormat:'h:mm:ss a'">
                 </div>
               </div>
               <div class="col-md-5">
                 <div class="form-group">
                   <label for="end-time">End Time</label>
-                  <input type="email" class="form-control" id="end-time" placeholder="eg. 5pm" ng-value="vm.timeEnded | amDateFormat:'h:mm:ss a'">
+                  <input type="email" class="form-control" id="end-time" placeholder="eg. 5pm" ng-value="timeEnded | amDateFormat:'h:mm:ss a'">
                 </div>
               </div>
               <div class="col-md-2">

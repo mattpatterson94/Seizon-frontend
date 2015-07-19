@@ -15,9 +15,8 @@
           entryId: '='
       },
       controller: EntryController,
-      controllerAs: 'entry',
-      bindToController: true,
       link: function($scope, element, attrs) {
+        $scope.collapsed = true;
         $scope.del = function()
         {
           element.remove();
@@ -28,10 +27,7 @@
     return directive;
 
     /** @ngInject */
-    function EntryController($scope) {
-      var entry = this;
-      $scope.collapsed = true;
-    }
+    function EntryController() {}
   }
 
 })();
