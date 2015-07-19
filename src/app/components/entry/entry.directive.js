@@ -21,6 +21,7 @@
         {
           var toDelete = confirm("Are you sure you want to delete this item?");
           if (toDelete) {
+            $scope.$parent.timers[$scope.entryId] = 0;
             element.remove();
           }
         }
@@ -33,6 +34,10 @@
             $scope.$broadcast('timeLogChange',{"val":newVal});
           }
         }, true);
+
+        $scope.$watch('timeEnded', function() {
+          $scope.$parent.timers[$scope.entryId] = Math.abs($scope.timeEnded - $scope.timeStarted);
+        });
       }
     };
 

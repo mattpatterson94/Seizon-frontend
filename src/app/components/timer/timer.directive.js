@@ -19,7 +19,6 @@
         $scope.firstStart = true;
         $scope.timeStarted = "";
         $scope.timeEnded = "";
-        $scope.test = "";
 
         $scope.$parent.$on('timer-start', function() {
           $scope.timerRunning = true;
@@ -42,10 +41,6 @@
 
           $scope.$parent.timeLog.push({"type": "start", "time": new Date()});
           console.log("start timeLog", $scope.$parent.timeLog);
-        });
-
-        $scope.$watch('test', function() {
-          console.log("Test changed");
         });
 
         $scope.startStopTimer = function(){
