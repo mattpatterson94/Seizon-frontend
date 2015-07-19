@@ -15,7 +15,16 @@
       controllerAs: 'time',
       bindToController: true,
       link: function($scope, element, attrs) {
-        $scope.$root.time = new Date();
+        $scope.$root.time = 0;
+        $scope.$root.totalTime = 0;
+        $scope.$root.$on('timeChanged', function(event, args) {
+          angular.forEach(args.timers, function(val) {
+            if(!val) return;
+            event.currentScope.totalTime += val;
+            event.currentScope.time = new Date(event.currentScope.totalTime);
+            event.currentScope.$apply();
+          });
+        });
       }
     };
 

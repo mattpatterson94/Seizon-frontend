@@ -29,7 +29,6 @@
         $scope.$parent.$on('timer-stop', function() {
           $scope.timerRunning = false;
           $scope.$parent.timeEnded = new Date();
-          $scope.$root.$broadcast('timeChanged');
         });
 
         $scope.$parent.$on('timer-resume', function() {

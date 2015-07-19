@@ -23,10 +23,16 @@
     /** @ngInject */
     function EntriesController($scope, $compile, $element) {
       var entries = this;
+      $scope.timers = [];
+      $scope.qty = 0;
       $scope.add = function()
       {
-        $element.find('.entries').append($compile('<seizon-entry></seizon-entry>')($scope));
+        $element.find('.entries').append($compile('<seizon-entry entry-id="'+($scope.qty++)+'"></seizon-entry>')($scope));
       }
+
+      $scope.$watch('timers', function() {
+        $scope.$root.$broadcast('timeChanged', { timers: $scope.timers });
+      }, true);
     }
   }
 
