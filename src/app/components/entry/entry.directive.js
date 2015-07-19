@@ -19,7 +19,10 @@
         $scope.collapsed = true;
         $scope.del = function()
         {
-          element.remove();
+          var toDelete = confirm("Are you sure you want to delete this item?");
+          if (toDelete) {
+            element.remove();
+          }
         }
       }
     };
