@@ -23,17 +23,25 @@
         $scope.$parent.$on('timer-start', function() {
           $scope.timerRunning = true;
           $scope.$parent.timeStarted = new Date();
+          $scope.$parent.timeLog.push({"type": "start", "time": new Date()});
+          console.log("start timeLog", $scope.$parent.timeLog);
+
           $scope.firstStart = false;
         });
 
         $scope.$parent.$on('timer-stop', function() {
           $scope.timerRunning = false;
           $scope.$parent.timeEnded = new Date();
+          $scope.$parent.timeLog.push({"type": "end", "time": new Date()});
+          console.log("end timeLog", $scope.$parent.timeLog);
         });
 
         $scope.$parent.$on('timer-resume', function() {
           $scope.$parent.timeStarted = new Date();
           $scope.timerRunning = true;
+
+          $scope.$parent.timeLog.push({"type": "start", "time": new Date()});
+          console.log("start timeLog", $scope.$parent.timeLog);
         });
 
         $scope.startStopTimer = function(){

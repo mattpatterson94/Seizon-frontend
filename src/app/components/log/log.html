@@ -1,0 +1,3 @@
+<div class="log-entry alert" ng-repeat="log in $parent.timeLog" ng-class="{'alert-success': log.type == 'start', 'alert-danger': log.type == 'end'}">
+  <strong>{{ log.type }}</strong> occured on {{ log.time | amDateFormat:'h:mm:ss a' }} <span class="pull-right" am-time-ago="log.time"></span>
+</div>

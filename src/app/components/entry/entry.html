@@ -22,6 +22,10 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-md-6">
+            <p>
+              <a href="#" ng-click="del()" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
+              <a href="#" ng-click="collapsed = !collapsed" class="btn btn-warning"><i class="fa fa-minus"></i></a>
+            </p>
             <div class="form-group">
               <label for="">Project Name</label>
               <input type="text" class="form-control" ng-model="test" placeholder="Start typing a project name...">
@@ -33,25 +37,7 @@
           </div>
           <div class="col-md-6">
             <seizon-timer size="large"></seizon-timer>
-            <p>Or:</p>
-            <div class="row">
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label for="start-time">Start Time</label>
-                  <input type="text" class="form-control" id="start-time" placeholder="eg. 10am" ng-value="timeStarted | amDateFormat:'h:mm:ss a'">
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label for="end-time">End Time</label>
-                  <input type="email" class="form-control" id="end-time" placeholder="eg. 5pm" ng-value="timeEnded | amDateFormat:'h:mm:ss a'">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <a href="#" ng-click="del()" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
-                <a href="#" ng-click="collapsed = !collapsed" class="btn btn-warning"><i class="fa fa-minus"></i></a>
-              </div>
-            </div>
+            <seizon-log></seizon-log>
           </div>
         </div>
       </div>

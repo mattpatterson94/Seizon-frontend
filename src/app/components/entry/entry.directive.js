@@ -26,6 +26,15 @@
           }
         }
 
+        $scope.timeLog = [];
+        $scope.$watch('timeLog', function(newVal, oldVal){
+          console.log('timeLogChange broadcast');
+          if(newVal!=oldVal) {
+            console.log('timeLogChange broadcast: newVal');
+            $scope.$broadcast('timeLogChange',{"val":newVal});
+          }
+        }, true);
+
         $scope.$watch('timeEnded', function() {
           if(!$scope.$parent.timers[$scope.entryId]) $scope.$parent.timers[$scope.entryId] = 0;
           if (!$scope.timeEnded || !$scope.timeStarted) return;
