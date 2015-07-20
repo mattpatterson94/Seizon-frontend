@@ -27,7 +27,9 @@
         }
 
         $scope.$watch('timeEnded', function() {
-          $scope.$parent.timers[$scope.entryId] = Math.abs($scope.timeEnded - $scope.timeStarted);
+          if(!$scope.$parent.timers[$scope.entryId]) $scope.$parent.timers[$scope.entryId] = 0;
+          if (!$scope.timeEnded || !$scope.timeStarted) return;
+          $scope.$parent.timers[$scope.entryId] += Math.abs($scope.timeEnded.getTime() - $scope.timeStarted.getTime());
         });
       }
     };

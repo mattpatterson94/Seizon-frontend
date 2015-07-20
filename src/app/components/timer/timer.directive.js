@@ -32,6 +32,7 @@
         });
 
         $scope.$parent.$on('timer-resume', function() {
+          $scope.$parent.timeStarted = new Date();
           $scope.timerRunning = true;
         });
 

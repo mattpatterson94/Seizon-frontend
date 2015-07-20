@@ -15,14 +15,12 @@
       controllerAs: 'time',
       bindToController: true,
       link: function($scope, element, attrs) {
-        $scope.$root.time = 0;
-        $scope.$root.totalTime = 0;
+        $scope.$root.time = new Date().setHours(0,0,0);
         $scope.$root.$on('timeChanged', function(event, args) {
-          $scope.$root.totalTime = 0;
+          $scope.$root.time = new Date().setHours(0,0,0);
           angular.forEach(args.timers, function(val) {
             if(!val) return;
-            event.currentScope.totalTime += val;
-            event.currentScope.time = new Date(event.currentScope.totalTime);
+            event.currentScope.time += val;
           });
         });
       }
