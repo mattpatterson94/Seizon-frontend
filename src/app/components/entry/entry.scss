@@ -1,24 +1,60 @@
 .seizon-entry {
   margin-bottom: 20px;
-
-  .collapsed {
-    & > .panel {
-      margin-bottom: -10px;
+  div.entry-details {
+    padding: 10px;
+    position: relative;
+    .del-btn-wrap {
+      position: absolute;
+      left: -60px;
+      top: 5px;
+      padding-right: 15px;
+      opacity: 0;
+      transition: 0.1s linear all;
     }
-    div.entry-details {
-      padding: 10px;
-    }
-    .panel-body {
-      padding: 0;
-    }
-    .panel-heading {
-      border-top-left-radius: 0;
+    .del-btn {
+      border-radius: 100%;
+      line-height: 1.7em;
+      font-size: 1.2em;
     }
     label.project-name {
       padding-left: 10px;
       font-size: 20px;
       vertical-align: sub;
       line-height: 20px;
+      transition: 0.1s linear all;
+      &:hover {
+        cursor: pointer;
+        color: $brand-primary;
+      }
+    }
+    &:hover {
+      .del-btn-wrap {
+        opacity: 1;
+      }
+    }
+  }
+  .uncollapsed {
+    div.entry-details {
+      padding: 0 0 10px 0;
+      .del-btn-wrap {
+        opacity: 1;
+        left: -75px;
+        top: -5px;
+      }
+      label.project-name {
+        padding-left: 0;
+     }
+   }
+  }
+  .collapsed {
+    & > .panel {
+      margin-bottom: -10px;
+    }
+    .panel-body {
+      padding: 0;
+    }
+    .panel-heading {
+      border-top-left-radius: 0;
     }
     .seizon-timer {
       margin-bottom: 0;

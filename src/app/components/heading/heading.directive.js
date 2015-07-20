@@ -15,7 +15,10 @@
       },
       controller: HeadingController,
       controllerAs: 'vm',
-      bindToController: true
+      bindToController: true,
+      link: function($scope, element, attr) {
+        $scope.$date = new Date();
+      }
     };
 
     return directive;
