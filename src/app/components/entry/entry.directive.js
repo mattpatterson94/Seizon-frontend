@@ -17,6 +17,7 @@
       controller: EntryController,
       link: function($scope, element, attrs) {
         $scope.collapsed = true;
+        $scope.totalTime = 0;
         $scope.del = function()
         {
           var toDelete = confirm("Are you sure you want to delete this item?");
@@ -35,10 +36,10 @@
           }
         }, true);
 
-        $scope.$watch('timeEnded', function() {
+        $scope.$watch('totalTime', function() {
           if(!$scope.$parent.timers[$scope.entryId]) $scope.$parent.timers[$scope.entryId] = 0;
           if (!$scope.timeEnded || !$scope.timeStarted) return;
-          $scope.$parent.timers[$scope.entryId] += $scope.timeEnded.diff($scope.timeStarted, 'milliseconds', true);
+          $scope.$parent.timers[$scope.entryId] = $scope.totalTime;
         });
       }
     };

@@ -46,6 +46,11 @@
           console.log("start timeLog", $scope.$parent.timeLog);
         });
 
+        $scope.$on('timer-tick', function (event, args) {
+          if($scope.duplicate) return;
+          $scope.$parent.totalTime = args.millis;
+        });
+
         $scope.startStopTimer = function(){
           if ($scope.firstStart == true) {
             // First time started
