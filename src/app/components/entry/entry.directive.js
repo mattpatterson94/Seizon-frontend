@@ -38,7 +38,7 @@
         $scope.$watch('timeEnded', function() {
           if(!$scope.$parent.timers[$scope.entryId]) $scope.$parent.timers[$scope.entryId] = 0;
           if (!$scope.timeEnded || !$scope.timeStarted) return;
-          $scope.$parent.timers[$scope.entryId] += Math.abs($scope.timeEnded.getTime() - $scope.timeStarted.getTime());
+          $scope.$parent.timers[$scope.entryId] += $scope.timeEnded.diff($scope.timeStarted, 'milliseconds', true);
         });
       }
     };

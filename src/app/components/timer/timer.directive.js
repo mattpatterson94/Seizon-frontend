@@ -22,7 +22,7 @@
 
         $scope.$parent.$on('timer-start', function() {
           $scope.timerRunning = true;
-          $scope.$parent.timeStarted = new Date();
+          $scope.$parent.timeStarted = moment();
           $scope.$parent.timeLog.push({"type": "start", "time": new Date()});
           console.log("start timeLog", $scope.$parent.timeLog);
 
@@ -31,16 +31,16 @@
 
         $scope.$parent.$on('timer-stop', function() {
           $scope.timerRunning = false;
-          $scope.$parent.timeEnded = new Date();
-          $scope.$parent.timeLog.push({"type": "end", "time": new Date()});
+          $scope.$parent.timeEnded = moment();
+          $scope.$parent.timeLog.push({"type": "end", "time": moment()});
           console.log("end timeLog", $scope.$parent.timeLog);
         });
 
         $scope.$parent.$on('timer-resume', function() {
-          $scope.$parent.timeStarted = new Date();
+          $scope.$parent.timeStarted = moment();
           $scope.timerRunning = true;
 
-          $scope.$parent.timeLog.push({"type": "start", "time": new Date()});
+          $scope.$parent.timeLog.push({"type": "start", "time": moment()});
           console.log("start timeLog", $scope.$parent.timeLog);
         });
 
@@ -62,7 +62,7 @@
     return directive;
 
     /** @ngInject */
-    function TimerController() {}
+    function TimerController($moment) {}
   }
 
 })();
