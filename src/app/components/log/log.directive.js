@@ -15,9 +15,7 @@
           entryId: '=',
           timeLog: '='
       },
-      controller: EntryController,
       link: function($scope, element, attrs) {
-
         $scope.$parent.$on("timeLogChange", function(event, args){
           console.log("timeLogChange!");
         });
@@ -25,9 +23,6 @@
     };
 
     return directive;
-
-    /** @ngInject */
-    function EntryController() {}
   }
 
 })();
